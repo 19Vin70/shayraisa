@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadahbook</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body oncontextmenu="return false">
+    <div class="container">
+        <div class="menu-container">
+            <div class="top-header">
+                <h3>Data connection</h3>
+                <div class="btns">
+                    <button id="wifi">
+                        <!-- <i class="fa-solid fa-wifi"></i> Buy data -->
+                        <div id="connectionStrength">Connection: Unknown</div>
+                    </button>
+                    <!-- <button>Switch modes</button> -->
+                </div>
+            </div>
+    
+            <header class="header">
+                <div class="top">
+                    <a href="#" class="logo">Dadahbook</a>
+                    <div class="right-icons">
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <button><i class="fa-solid fa-search"></i></button>
+                        <button><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link"><i class="fa-solid fa-home active"></i></a>
+                    <a href="friends.html" class="nav-link"><i class="fa-solid fa-users"></i></a>
+                    <a href="chat.html" class="nav-link"><i class="fa-brands fa-facebook-messenger"></i></a>
+                    <a href="notification.html" class="nav-link"><i class="fa-solid fa-bell"></i></a>
+                    <a href="video.html" class="nav-link"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="store.html" class="nav-link"><i class="fa-solid fa-store"></i></a>
+                </nav>                          
+            </header>
+        </div>
+
+        <div class="post-container">
+            <img src="images/openai.jpg" alt="">
+            <form id="postForm">
+                <input type="text" id="postInput" placeholder="What's on your mind?">
+                <input type="file" id="mediaInput" accept="image/*, video/*" style="display: none;">
+                <button type="submit">Post</button>
+            </form>
+            <div class="photo">
+                <i class="fa-solid fa-photo-film"></i>
+                <span>Media</span>
+            </div>
+        </div>     
+        <div class="feed" id="feed"></div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

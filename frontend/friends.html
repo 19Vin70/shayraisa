@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dadahbook</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body oncontextmenu="return false">
+    <div class="container">
+        <div class="menu-container">
+            <div class="top-header">
+                <h3>Data connection</h3>
+                <div class="btns">
+                    <button id="wifi">
+                        <!-- <i class="fa-solid fa-wifi"></i> Buy data -->
+                        <div id="connectionStrength">Connection: Unknown</div>
+                    </button>
+                    <!-- <button>Switch modes</button> -->
+                </div>
+            </div>
+    
+            <header class="header">
+                <div class="top">
+                    <a href="#" class="logo">Dadahbook</a>
+                    <div class="right-icons">
+                        <button><i class="fa-solid fa-plus"></i></button>
+                        <button><i class="fa-solid fa-search"></i></button>
+                        <button><i class="fa-solid fa-bars"></i></button>
+                    </div>
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link"><i class="fa-solid fa-home"></i></a>
+                    <a href="friends.html" class="nav-link"><i class="fa-solid fa-users"></i></a>
+                    <a href="chat.html" class="nav-link"><i class="fa-brands fa-facebook-messenger"></i></a>
+                    <a href="notification.html" class="nav-link"><i class="fa-solid fa-bell"></i></a>
+                    <a href="video.html" class="nav-link"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="store.html" class="nav-link"><i class="fa-solid fa-store"></i></a>
+                </nav>  
+            </header>
+        </div>
+
+        
+        <section class="friends-list">
+            <h2>Friends</h2>
+            
+            <div class="friend">
+                <img src="images/ai-gf.png" alt="Friend 1">
+                <p>Shayra Isa</p>
+                <button class="add-button" data-action="add">Add</button>
+                <button class="delete-button" data-action="delete">Delete</button>
+            </div>
+
+            <div class="friend">
+                <img src="images/shoto.webp" alt="Friend 2">
+                <p>Shouto Todoroki</p>
+                <button class="add-button" data-action="add">Add</button>
+                <button class="delete-button" data-action="delete">Delete</button>
+            </div>
+
+            <div class="friend">
+                <img src="images/afternoon.jpg" alt="Friend 1">
+                <p>Coffee Time</p>
+                <button class="add-button" data-action="add">Add</button>
+                <button class="delete-button" data-action="delete">Delete</button>
+            </div>
+
+            <div class="friend">
+                <img src="images/openai.jpg" alt="Friend 2">
+                <p>Kabe Taiijin</p>
+                <button class="add-button" data-action="add">Add</button>
+                <button class="delete-button" data-action="delete">Delete</button>
+            </div>
+
+            
+        </section>
+
+
+
+    </div>
+    
+    <script>
+       function showToast(message) {
+        const toastContainer = document.createElement('div');
+        toastContainer.classList.add('toast');
+        toastContainer.textContent = message;
+        document.body.appendChild(toastContainer);
+
+        setTimeout(() => {
+            toastContainer.remove();
+        }, 2000);
+    }
+
+    const addButtons = document.querySelectorAll('.add-button');
+    addButtons.forEach(addButton => {
+        addButton.addEventListener('click', () => {
+            const friendEntry = addButton.parentElement;
+            const friendName = friendEntry.querySelector('p').textContent;
+
+            showToast('Added successfully');
+            
+            setTimeout(() => {
+                friendEntry.remove();
+            }, 2000);
+        });
+    });
+
+    const deleteButtons = document.querySelectorAll('.delete-button');
+    deleteButtons.forEach(deleteButton => {
+        deleteButton.addEventListener('click', () => {
+            const friendEntry = deleteButton.parentElement;
+            const friendName = friendEntry.querySelector('p').textContent;
+
+            friendEntry.remove();
+            showToast('Deleted successfully');
+        });
+    });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

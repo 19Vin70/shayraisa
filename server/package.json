@@ -1,0 +1,17 @@
+{
+  "name": "dadahbook",
+  "version": "1.0.0",
+  "description": "This is a social media platform dedicated to my Girlfriend.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marvin Quillo Saik",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.10.1"
+  }
+}
